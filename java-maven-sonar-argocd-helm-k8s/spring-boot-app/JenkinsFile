@@ -24,7 +24,7 @@ pipeline {
         SONAR_URL = "http://34.234.203.217:9000"
       }
       steps {
-        withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
+        withCredentials([string(credentialsId: 'sonarqube', variable: '87599ecc372718ce62101578d1fde30115461831')]) {
           sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
         }
       }
